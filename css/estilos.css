@@ -1,0 +1,914 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/*--------------------------------------------HEADER--------------------------------------------*/
+
+header {
+  position: relative;
+  background-color: rgb(33, 32, 32);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  height: 10vh;
+}
+#div-logo1-responsive {
+  margin-left: 2%;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#div-logo1 {
+  display: none;
+}
+#img-logo1-responsive {
+  height: 90%;
+}
+#button-nav {
+  margin-left: 67%;
+  padding: 0;
+  border: 0;
+  width: 15%;
+  height: 90%;
+  background-color: rgb(33, 32, 32);
+}
+#button-nav img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.no-show-nav {
+  display: none;
+}
+.show-nav {
+  width: 100%;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(33, 32, 32);
+  z-index: 1;
+}
+header a:hover {
+  color: #ffaf11;
+  border-bottom: 1px solid #ffaf11;
+}
+header a {
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 5% 0;
+  color: white;
+  border-bottom: 1px solid rgb(33, 32, 32);
+}
+
+@media only screen and (min-width: 1000px) {
+  header {
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(33, 32, 32);
+    display: flex;
+  }
+  #div-logo1-responsive,
+  #button-nav {
+    display: none;
+  }
+  .no-show-nav {
+    display: contents;
+  }
+  header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header a {
+    color: white;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    height: 20px;
+    width: 15%;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+  }
+  header a:hover {
+    border-bottom: 2px solid #ffaf11;
+    transition: width 0.5s linear 0.5s;
+  }
+  #div-logo1 {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #img-logo1 {
+    height: 90%;
+  }
+  #button-nav {
+    display: none;
+  }
+}
+
+/*-----------------------------FOOTER------------------------------------------------------*/
+
+footer {
+  background-color: rgb(33, 32, 32);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-footer-div {
+  width: 49%;
+  height: 30vh;
+  margin: 5% 1%;
+}
+
+footer h3 {
+  color: white;
+  text-align: center;
+  border-bottom: 1px #ffaf11 solid;
+}
+footer ul {
+  margin-bottom: 0;
+}
+footer li {
+  list-style: none;
+}
+
+footer p,
+footer ul li a {
+  font-size: small;
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+footer ul li a:hover {
+  color: #ffaf11;
+}
+
+.red-social-icons-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.red-social-icon img {
+  width: 50%;
+  margin-left: 20px;
+}
+
+footer .red-social-icon:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer {
+    height: 30vh;
+  }
+  .sub-footer-div {
+    width: 20%;
+    height: 25vh;
+    margin: 0 4%;
+  }
+  footer h3 {
+    margin-top: 0;
+    font-size: 2.5vh;
+  }
+  footer p,
+  footer ul li a {
+    font-size: 2.5vh;
+  }
+}
+
+/*-----------------------------HOME PAGE-----------------------------------------------------------*/
+
+#div-logo2 {
+  width: 100%;
+  height: 30vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(33, 32, 32, 0.7),
+      rgba(33, 32, 32, 0.8)
+    ),
+    url('../img/beer-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20vh 10vh;
+}
+#logo2 {
+  grid-area: "logo";
+  margin: 0 auto;
+  padding-top: 7vh;
+  width: 55%;
+}
+#div-logo2 h1 {
+  grid-area: "title";
+  width: 70%;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  text-align: center;
+}
+.home-article {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 2px solid black;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: 60vh 40vh;
+  grid-template-areas:
+    "text"
+    "img";
+}
+.home-text {
+  grid-area: text;
+  text-align: justify;
+  align-items: flex-start;
+  width: 90%;
+}
+.home-text h2 {
+  font-size: 15px;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+}
+.home-article img {
+  grid-area: img;
+  height: 30vh;
+  width: 80%;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 999px) {
+  .home-text {
+    width: 75%;
+  }
+  .home-article img {
+    width: 440px;
+  }
+
+  .home-text h2 {
+    font-size: 25px;
+    margin: 50px 0 75px 40px;
+  }
+
+  .home-text p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #div-logo2 {
+    height: 80vh;
+    grid-template-rows: 50vh 30vh;
+  }
+
+  #logo2 {
+    padding-top: 20vh;
+  }
+
+  #div-logo2 h1 {
+    font-size: 30px;
+  }
+
+  .home-article {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .home-article:last-of-type {
+    height: 70vh;
+  }
+
+  .home-text {
+    width: 60%;
+  }
+
+  .home-text h2 {
+    font-size: 50px;
+    width: 80%;
+    margin: 50px 0 75px 40px;
+  }
+
+  .home-text p {
+    font-size: 25px;
+    width: 80%;
+    text-align: justify;
+    margin-left: 40px;
+  }
+
+  .home-article img {
+    width: 38%;
+    height: 415px;
+    align-self: center;
+    padding-right: 10px;
+  }
+}
+
+/*----------------------------PRECIOS---------------------------------------------------------------------*/
+
+.cerveza-en-stock {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tipo-de-cerveza {
+  padding-left: 10px;
+}
+
+.tipo-de-cerveza h2 {
+  font-size: 40px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.tipo-de-cerveza p {
+  font-size: 20px;
+  text-align: justify;
+  width: 85%;
+}
+
+.tipo-de-cerveza h4 {
+  font-size: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+.imagen-de-cerveza {
+  display: block;
+  height: 165px;
+  align-self: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .cerveza-en-stock {
+    height: 50vh;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tipo-de-cerveza {
+    width: 60%;
+    padding-left: 40px;
+  }
+
+  .imagen-de-cerveza {
+    padding-right: 13%;
+  }
+}
+/*----------------------------PACKS-------------------------------------------------------------------------*/
+
+#packs-title-div {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(204, 168, 104, 0.68),
+      rgba(33, 33, 32, 0.47)
+    ),
+    url('../img/beer-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#packs-title-div h2 {
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding-top: 45%;
+  font-size: 40px;
+  width: 80%;
+}
+
+.promocion {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promo-text {
+  width: 80%;
+  padding-left: 4%;
+}
+
+.promo-text h3 {
+  width: 100%;
+  font-size: 30px;
+}
+
+.promo-text p {
+  font-size: 25px;
+}
+
+.promocion img {
+  align-self: center;
+  height: 250px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+  #packs-title-div {
+    height: 30vh;
+  }
+
+  #packs-title-div h2 {
+    margin: 0;
+    padding-top: 50px;
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .promocion {
+    height: 50vh;
+    flex-direction: row;
+  }
+
+  .promo-text {
+    width: 50%;
+  }
+
+  .promocion img {
+    width: 20%;
+    padding-left: 180px;
+  }
+}
+
+/*-----------------------------KIT---------------------------------------------------------------------------*/
+.article-kit {
+  height: 100vh;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.article-kit:last-of-type {
+  height: 100%;
+  width: 100%;
+}
+
+.article-kit h2,
+.article-kit h4,
+.article-kit p {
+  text-align: center;
+  color: black;
+}
+
+.article-kit p {
+  font-size: 20px;
+}
+
+#haz-tu-cerveza-div {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(204, 168, 104, 0.68),
+      rgba(33, 33, 32, 0.47)
+    ),
+    url('../img/beer-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+#haz-tu-cerveza-img {
+  border: none;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.subtitulo-article-kit {
+  width: 80%;
+  margin: 35px auto 0 auto;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.imagen-kit {
+  width: 65%;
+  margin: 30px auto;
+  display: block;
+}
+
+#imagen-elementos-kit {
+  width: 100%;
+  margin: 30px auto;
+  display: block;
+}
+
+.parrafos-del-kit {
+  text-align: justify;
+  margin: 10px auto;
+  width: 70%;
+}
+
+#section-list {
+  width: 75%;
+  margin: auto;
+}
+
+#section-list li {
+  padding: 20px 0;
+}
+@media only screen and (min-width: 1000px) {
+  .div-article {
+    margin-top: 100px;
+  }
+
+  .article-kit p {
+    font-size: 25px;
+    width: 80%;
+  }
+
+  #haz-tu-cerveza-img {
+    width: 45%;
+    padding-top: 10%;
+  }
+
+  .subtitulo-article-kit {
+    width: 60%;
+    margin: 100px auto 0 auto;
+    font-size: 40px;
+  }
+
+  .imagen-kit {
+    width: 50%;
+  }
+
+  #imagen-elementos-kit {
+    width: 60%;
+  }
+
+  .parrafos-del-kit {
+    margin: 10px 100px;
+  }
+
+  #section-list {
+    width: 60%;
+  }
+}
+
+/*----------------------------TABLA-------------------------------------------------------------------------*/
+
+#table-article {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(33, 32, 32, 0.7),
+      rgba(33, 32, 32, 0.8)
+    ),
+    url("../img/pintsender.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 50px;
+}
+#table-article h2 {
+  font-size: 20px;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+  color: white;
+}
+
+#table-article h3 {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+.filtros-div label {
+  font-size: 16px;
+}
+
+table {
+  margin: 0 auto;
+  font-size: 15px;
+  color: white;
+}
+
+table,
+td,
+tr {
+  border: 1px solid white;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: white;
+  font-size: 8px;
+  width: 4em;
+}
+
+td input:focus {
+  border: none;
+  background-color: #ffb0114d;
+}
+
+.beer-buttons-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.table-button {
+  color: white;
+  font-size: 8px;
+  background-color: #ffb0114d;
+  border: none;
+  padding: 3px;
+}
+
+.en_stock.mostrar {
+  background-color: #ffb0114d;
+}
+
+th,
+td img {
+  width: 5em;
+  font-size: 10px;
+}
+#seleccion-imagen-cerveza-tabla-form {
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#tabla-form .tabla-form-section div .radio {
+  width: 30%;
+}
+#seleccion-imagen-cerveza-tabla-form img {
+  width: 30%;
+}
+th {
+  padding: 1.5% 0;
+}
+
+#tabla-form {
+  background-color: #ffb0114d;
+  padding: 5%;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.tabla-form-section {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#tabla-form .tabla-form-section input {
+  width: 70%;
+}
+#tabla-form .tabla-form-section div input {
+  width: 25%;
+}
+#bucle-number,
+.tabla-form-section button {
+  width: 30%;
+  margin: 7px 0;
+}
+.tabla-form-section div {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filtros-div {
+  width: 70%;
+  margin: auto;
+  display: flex; 
+  flex-wrap: wrap; 
+  margin-bottom: 30px;
+}
+
+.filtro-par {
+  color: white;
+  font-size: 20px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #table-article h2 {
+    font-size: 40px;
+  }
+
+  .filtros-div label {
+    font-size: 1em;
+  }
+
+  table {
+    font-size: 18px;
+  }
+
+  th,
+  td input,
+  td img {
+    width: 8em;
+    font-size: 1em;
+  }
+
+  .table-button {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  #tabla-form .tabla-form-section div input {
+    width: 45%;
+  }
+  .tabla-form-section button {
+    margin: 10px 0;
+  }
+}
+
+/*-----------------------------CONTACT------------------------------------------------------------------------*/
+
+#contact-article {
+  height: 90vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(204, 168, 104, 0.68),
+      rgba(33, 33, 32, 0.47)
+    ),
+    url('../img/beer-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-article h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.form {
+  width: 80%;
+  margin: auto;
+}
+
+.form label {
+  font-size: 15px;
+}
+
+.form input {
+  display: block;
+  width: 70%;
+  margin: 10px 0 30px 0;
+  height: 30px;
+  font-size: 17px;
+  border: none;
+  color: black;
+  padding-left: 10px;
+}
+
+#captcha-box {
+  width: 60px;
+  text-align: center;
+  height: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+}
+
+#captcha-answer {
+  width: 60px !important;
+  text-align: center;
+  font-size: 15px;
+  padding-left: 0;
+}
+
+#error-message {
+  width: 85%;
+  font-size: 15px;
+  position: relative;
+  bottom: 55px;
+  left: 65px;
+  visibility: hidden;
+  color: white;
+}
+
+#error-message.show {
+  visibility: visible;
+}
+
+.form button {
+  border-radius: 2px;
+  width: 70px;
+  height: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+}
+
+#submit-button {
+  position: relative;
+  left: 80%;
+  bottom: 58px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #contact-article {
+    height: 80vh;
+  }
+
+  #contact-article h2 {
+    font-size: 35px;
+  }
+
+  .form {
+    width: 60%;
+  }
+
+  .form label {
+    font-size: 20px;
+  }
+
+  .form input {
+    margin: 10px 0 30px 0;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 10px;
+    width: 40%;
+  }
+
+  #captcha-box {
+    width: 110px;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+
+  #captcha-answer {
+    width: 110px !important;
+    font-size: 20px;
+  }
+
+  #error-message {
+    font-size: 17px;
+    left: 120px;
+    width: 35%;
+  }
+
+  .form button {
+    border-radius: 5px;
+    width: 125px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  #submit-button {
+    left: 80%;
+    bottom: 95px;
+  }
+}

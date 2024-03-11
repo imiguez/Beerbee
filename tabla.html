@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <title>Document</title>
+  </head>
+  <body>
+
+    <article id="table-article">
+      <h2>TABLA DE COMPARACIÓN</h2>
+      <div class="filtros-div">
+        <div class="filtro-par">
+          <input type="checkbox" name="en-stock" id="en-stock-filtro">
+          <label for="">Mostrar solo cervezas en stock</label>
+        </div>
+        <div class="filtro-par">
+          <input type="checkbox" name="bajo-alcohol" id="bajo-alcohol-filtro">
+          <label for="">Mostrar cervezas bajo contenido alcohólico (menor a 5%)</label>
+        </div>        
+      </div>
+      <table id="tabla-comparacion">
+      </table>
+      <h3 id="sin-cervezas"></h3>
+      <h2>Edicion de Tabla Comparativa</h2>
+      <form class="form" id="tabla-form">
+        <section class="tabla-form-section">
+          <label for="name">Nombre de la Cerveza:</label>
+          <input type="text" placeholder="Cerveza.." id="beer-name">
+          <label for="alcohol">Rango de %Alcohol:</label>
+          <input type="text" placeholder="%Alcohol.." id="beer-alcohol">
+          <label for="OG">Rango de OG:</label>
+          <input type="text" placeholder="Origin Gravity.." id="beer-OG">
+          <label for="IBU">Rango de IBU:</label>
+          <input type="text" placeholder="IBU.." id="beer-IBU">
+          <label for="FG">Rango de FG:</label>
+          <input type="text" placeholder="Finally Gravity" id="beer-FG">
+          <button type="button" id="sumar-button">SUMAR 1</button>
+          <div>
+            <input type="number" id="bucle-number">
+            <button type="button" id="sumar-bucle-button">SUMAR</button>
+          </div>
+        </section>
+        <section class="tabla-form-section">
+          <label for="image">Seleccione una Imagen:</label>
+          <div id="seleccion-imagen-cerveza-tabla-form">
+            <img id="Kolsch" src="../img/Kolsch.png" alt="">
+            <img id="Honey" src="../img/Honey.png" alt="">
+            <img id="GoldenAle" src="../img/Golden-Ale.png" alt="">
+            <input class="radio" type="radio" name="cervezaImg" value="../img/Kolsch.png">
+            <input class="radio" type="radio" name="cervezaImg" value="../img/Honey.png">
+            <input class="radio" type="radio" name="cervezaImg" value="../img/Golden-Ale.png">
+            <img id="AmericanIPA" src="../img/American-IPA.png" alt="">
+            <img id="IrishRed" src="../img/Irish-Red.png" alt="">
+            <img id="BelgianStout" src="../img/Belgian-Stout.png" alt="">
+            <input class="radio" type="radio" name="cervezaImg" value="../img/American-IPA.png">
+            <input class="radio" type="radio" name="cervezaImg" value="../img/Irish-Red.png">
+            <input class="radio" type="radio" name="cervezaImg" value="../img/Belgian-Stout.png">
+          </div>
+          <label for="Stock">SIN STOCK</label>
+          <input id="sin-stock" type="checkbox">
+          <button type="button" id="restar-button">RESTAR</button>
+          <button type="button" id="reset-button">VACIAR</button>
+        </section>
+      </form>
+    </article>
+
+
+    <!-- <script src="../js/tabla.js"></script>
+    <script src="../js/responsive.js"></script> -->
+  </body>
+</html>
